@@ -1,0 +1,4 @@
+ALTER TABLE public.ats_scores
+  ADD COLUMN IF NOT EXISTS matched_keywords JSONB NOT NULL DEFAULT '[]'::jsonb,
+  ADD COLUMN IF NOT EXISTS missing_keywords JSONB NOT NULL DEFAULT '[]'::jsonb,
+  ADD COLUMN IF NOT EXISTS verdict TEXT NOT NULL DEFAULT '';
